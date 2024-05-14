@@ -7,7 +7,7 @@
     tools:context=".ui.ArticleFragment">
 
     <ProgressBar
-        android:id="@+id/progress_bar_people"
+        android:id="@+id/progress_bar"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
@@ -15,10 +15,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recycler_view_people" />
+        app:layout_constraintTop_toTopOf="@+id/recycler_view" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_people"
+        android:id="@+id/recycler_view"
         android:background="#A6B4F2"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

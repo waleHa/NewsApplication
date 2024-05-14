@@ -39,8 +39,8 @@ class ArticleFragment : Fragment() {
 
     private fun setupRecyclerView() {
         adapter = ArticleAdapter { navigationToDetails(it) }
-        binding.recyclerViewPeople.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerViewPeople.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.adapter = adapter
     }
 
     private fun setupObservers() {
@@ -51,7 +51,7 @@ class ArticleFragment : Fragment() {
         }
 
         viewModel.newsListLoading.observe(viewLifecycleOwner) {
-            binding.progressBarPeople.visibility = if (it) View.VISIBLE else View.GONE
+            binding.progressBar.visibility = if (it) View.VISIBLE else View.GONE
         }
     }
 

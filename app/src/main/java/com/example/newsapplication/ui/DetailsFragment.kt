@@ -19,7 +19,7 @@ class DetailsFragment : Fragment() {
     private var _binding : FragmentDetailsBinding? = null
 
     private val binding get() = _binding!!
-    val TAG = "TAG: DetailedPeopleFragment"
+    val TAG = "TAG: DetailedFragment"
 
 
 
@@ -36,9 +36,9 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            val articleDTO = it.getParcelable(ARTICLE_KEY, Article::class.java)
-            if (articleDTO != null) {
-                updateUI(articleDTO)
+            val article = it.getParcelable(ARTICLE_KEY, Article::class.java)
+            if (article != null) {
+                updateUI(article)
             } else {
                 showError()
             }
