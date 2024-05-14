@@ -6,10 +6,10 @@
         android:icon="@drawable/baseline_broadcast_on_personal_24"
         android:title="@string/article"
         />
-    <item
-        android:id="@+id/nav_news"
-        android:enabled="true"
-        android:icon="@drawable/baseline_live_tv_24"
-        android:title="@string/news"
-        />
+<!--    <item-->
+<!--        android:id="@+id/nav_news"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/baseline_live_tv_24"-->
+<!--        android:title="@string/news"-->
+<!--        />-->
 </menu>

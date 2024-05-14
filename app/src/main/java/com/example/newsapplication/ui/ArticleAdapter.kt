@@ -27,6 +27,7 @@ class ArticleAdapter(private val onItemClicked: (Article) -> Unit): ListAdapter<
             Glide.with(binding.imageViewArticle.context)
                 .load(item.urlToImage)
                 .placeholder(R.drawable.ic_launcher_foreground)
+                .centerCrop()
                 .into(binding.imageViewArticle)
             binding.textViewTitle.text = item.title
             binding.textViewDescription.text = item.description

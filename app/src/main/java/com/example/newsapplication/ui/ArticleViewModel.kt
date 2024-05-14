@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsapplication.data.repository.Repository
-import com.example.newsapplication.domain.model.Article
 import com.example.newsapplication.domain.model.NewsModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -18,8 +17,11 @@ class ArticleViewModel @Inject constructor(
     private val repository : Repository
 ) : ViewModel() {
 
-    private val _newsList = MutableLiveData<Response<NewsModel>>()
-    val newsList : LiveData<Response<NewsModel>> = _newsList
+    private val _newsListSuccess = MutableLiveData<Response<NewsModel>>()
+    val newsListSuccess : LiveData<Response<NewsModel>> = _newsListSuccess
+
+    private val _newsListLoading = MutableLiveData<Boolean>(true)
+     val newsListLoading : LiveData<Boolean> = _newsListLoading
 
     init {
         getList ()
@@ -29,12 +31,15 @@ class ArticleViewModel @Inject constructor(
         val TAG = "TAG: ArticleViewmodel"
         viewModelScope.launch {
             try {
+
                 val result = repository.getNews()
                 if (result.isSuccessful()){
-                    _newsList.postValue(result)
+                    _newsListSuccess.postValue(result)
                 }
             } catch (e:Exception){
                 Log.e(TAG,e.localizedMessage)
+            }finally {
+                _newsListLoading.postValue(false)
             }
         }
     }

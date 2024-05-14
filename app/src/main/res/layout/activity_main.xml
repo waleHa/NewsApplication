@@ -9,17 +9,25 @@
 
    <androidx.fragment.app.FragmentContainerView
        android:id="@+id/fragment_container"
+       android:name="androidx.navigation.fragment.NavHostFragment"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:background="#A6B4F2"
-       />
+       android:layout_height="0dp"
+       app:defaultNavHost="true"
+       app:navGraph="@navigation/nav_graph"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:background="#B6C4FF"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+       app:layout_constraintTop_toTopOf="parent"/>
+
    <com.google.android.material.bottomnavigation.BottomNavigationView
        android:id="@+id/bottom_navigation"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        app:itemIconSize="40dp"
-       app:itemIconTint="@color/white"
+       app:itemIconTint="#96A4E2"
        app:itemTextColor="@color/white"
+       android:background="#96A4E2"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
