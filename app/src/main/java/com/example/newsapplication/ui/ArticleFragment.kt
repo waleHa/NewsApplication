@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.newsapplication.databinding.FragmentArticleBinding
+import com.example.newsapplication.domain.model.Article
+import com.example.newsapplication.util.Constant
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,10 +29,17 @@ class ArticleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val adapter = ArticleAdapter{
+            navigationToDetails(it)
+        }
         viewmodel.newsList.observe(viewLifecycleOwner) {
-
+            adapter.submitList(it.body()?.articles)
         }
     }
 
+    fun navigationToDetails(article: Article){
+        val bundle = Bundle().also {
+            it.putParcelable(Constant.ARTICLE_KEY,article)
+        }
+    }
 }

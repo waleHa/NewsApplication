@@ -1,8 +1,11 @@
 package com.example.newsapplication.domain.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Article(
     @SerializedName("author")
     val author: String? = "",
@@ -20,4 +23,4 @@ data class Article(
     val url: String? = "",
     @SerializedName("urlToImage")
     val urlToImage: String? = ""
-)
+):Parcelable

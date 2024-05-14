@@ -13,7 +13,6 @@ import com.example.newsapplication.ui.ArticleFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,25 +30,25 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.nav_article-> {
-                    Log.i(TAG, "setFragment: Article")
-                    navController.navigate(R.id.nav_article)
-                    true
-                }
-
-                R.id.nav_news -> {
-                    Log.i(TAG, "setFragment: News")
-                    navController.navigate(R.id.nav_news)
-                    true
-                }
-
-                else -> {
-                    Log.i(TAG, "setFragment: Else")
-                    false
-                }
-            }
-        }
+//        binding.bottomNavigation.setOnItemSelectedListener {
+//            when (it.itemId) {
+//                R.id.nav_article-> {
+//                    Log.i(TAG, "setFragment: Article")
+//                    navController.navigate(R.id.nav_article)
+//                    true
+//                }
+//
+//                R.id.nav_news -> {
+//                    Log.i(TAG, "setFragment: News")
+//                    navController.navigate(R.id.nav_news)
+//                    true
+//                }
+//
+//                else -> {
+//                    Log.i(TAG, "setFragment: Else")
+//                    false
+//                }
+//            }
+//        }
     }
 }
