@@ -20,32 +20,47 @@
             android:id="@+id/avatar_image_view"
             android:layout_width="300dp"
             android:layout_height="300dp"
+            android:scaleType="centerCrop"
             android:contentDescription="@string/avatar"
             android:src="@drawable/baseline_account_circle_24"
             />
     </FrameLayout>
+    <TextView
+        android:id="@+id/author_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar_layout_view"
+        tools:text="Author" />
 
     <TextView
         android:id="@+id/title_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/avatar_layout_view"
+        app:layout_constraintTop_toBottomOf="@id/author_text_view"
+
         tools:text="Title" />
 
     <TextView
         android:id="@+id/description_text_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_text_view"
+
         tools:text="Description" />
 
 

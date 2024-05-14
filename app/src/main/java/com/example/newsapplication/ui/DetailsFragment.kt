@@ -51,6 +51,7 @@ class DetailsFragment : Fragment() {
                 .placeholder(R.drawable.baseline_account_circle_24).into(avatarImageView)
             titleTextView.text = article.title
             descriptionTextView.text = article.description
+            authorTextView.text = article.author
         }
     }
     private fun showError() {
