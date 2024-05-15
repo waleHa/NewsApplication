@@ -27,9 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.nav_article-> {
+                R.id.nav_us_article-> {
                     Log.i("TAG: MainActivity", "setFragment: Article")
-                    navController.navigate(R.id.nav_article)
+                    navController.navigate(R.id.nav_us_article)
                     true
                 }
 

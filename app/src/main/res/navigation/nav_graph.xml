@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/nav_article">
+    app:startDestination="@id/nav_us_article">
 
     <fragment
-        android:id="@+id/nav_article"
+        android:id="@+id/nav_us_article"
         android:name="com.example.newsapplication.ui.ArticleFragment"
         android:label="fragment_article"
         tools:layout="@layout/fragment_article" >
