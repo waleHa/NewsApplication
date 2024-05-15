@@ -5,6 +5,12 @@
         android:icon="@drawable/icon_us"
         android:title="@string/us_article"
         />
+
+    <item
+        android:id="@+id/nav_uk_article"
+        android:icon="@drawable/icon_uk"
+        android:title="@string/uk_article"
+        />
 <!--    <item-->
 <!--        android:id="@+id/nav_news"-->
 <!--        android:enabled="true"-->

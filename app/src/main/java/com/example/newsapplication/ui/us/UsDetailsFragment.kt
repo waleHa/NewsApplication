@@ -1,4 +1,4 @@
-package com.example.newsapplication.ui
+package com.example.newsapplication.ui.us
 
 import android.os.Bundle
 import android.util.Log
@@ -15,7 +15,7 @@ import com.example.newsapplication.util.Constant.ARTICLE_KEY
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class DetailsFragment : Fragment() {
+class UsDetailsFragment : Fragment() {
     private var _binding : FragmentDetailsBinding? = null
 
     private val binding get() = _binding!!

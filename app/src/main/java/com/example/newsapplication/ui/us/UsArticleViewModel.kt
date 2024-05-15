@@ -1,4 +1,4 @@
-package com.example.newsapplication.ui
+package com.example.newsapplication.ui.us
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -13,7 +13,7 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class ArticleViewModel @Inject constructor(
+class UsArticleViewModel @Inject constructor(
     private val repository : Repository
 ) : ViewModel() {
 
@@ -28,11 +28,11 @@ class ArticleViewModel @Inject constructor(
     }
 
     private fun getList () {
-        val TAG = "TAG: ArticleViewmodel"
+        val TAG = "TAG: UsArticleViewModel"
         viewModelScope.launch {
             try {
 
-                val result = repository.getNews()
+                val result = repository.getUsNews()
                 if (result.isSuccessful()){
                     _newsListSuccess.postValue(result)
                 }

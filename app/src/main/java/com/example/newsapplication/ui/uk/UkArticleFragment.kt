@@ -1,32 +1,29 @@
-package com.example.newsapplication.ui
+package com.example.newsapplication.ui.uk
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.newsapplication.R
-import com.example.newsapplication.databinding.FragmentArticleBinding
+import com.example.newsapplication.databinding.FragmentUkArticleBinding
 import com.example.newsapplication.domain.model.Article
-import com.example.newsapplication.util.Constant
+import com.example.newsapplication.ui.ArticleAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ArticleFragment : Fragment() {
-    lateinit var binding: FragmentArticleBinding
+class UkArticleFragment : Fragment() {
+    lateinit var binding: FragmentUkArticleBinding
 
-    val viewModel: ArticleViewModel by viewModels()
+    val viewModel: UkArticleViewModel by viewModels()
     private lateinit var adapter: ArticleAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentArticleBinding.inflate(inflater, container, false)
+        binding = FragmentUkArticleBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -56,9 +53,9 @@ class ArticleFragment : Fragment() {
     }
 
     private fun navigationToDetails(article: Article) {
-        val bundle = Bundle().apply {
-            putParcelable(Constant.ARTICLE_KEY, article)
-        }
-        findNavController().navigate(R.id.action_articleFragment_to_detailsFragment, bundle)
+//        val bundle = Bundle().apply {
+//            putParcelable(Constant.ARTICLE_KEY, article)
+//        }
+//        findNavController().navigate(R.id.action_articleFragment_to_detailsFragment, bundle)
     }
 }

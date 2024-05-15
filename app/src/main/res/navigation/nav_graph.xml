@@ -7,16 +7,27 @@
 
     <fragment
         android:id="@+id/nav_us_article"
-        android:name="com.example.newsapplication.ui.ArticleFragment"
+        android:name="com.example.newsapplication.ui.us.UsArticleFragment"
         android:label="fragment_article"
-        tools:layout="@layout/fragment_article" >
+        tools:layout="@layout/fragment_us_article">
         <action
             android:id="@+id/action_articleFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.newsapplication.ui.DetailsFragment"
+        android:name="com.example.newsapplication.ui.us.UsDetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
+
+    <fragment
+        android:id="@+id/nav_uk_article"
+        android:name="com.example.newsapplication.ui.uk.UkArticleFragment"
+        android:label="fragment_uk_article"
+        tools:layout="@layout/fragment_uk_article" >
+        <action
+            android:id="@+id/action_nav_uk_article_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
 </navigation>

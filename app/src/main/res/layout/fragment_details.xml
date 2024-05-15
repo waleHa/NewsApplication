@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".ui.DetailsFragment">
+    tools:context=".ui.us.UsDetailsFragment">
 
     <FrameLayout
         android:id="@+id/avatar_layout_view"
