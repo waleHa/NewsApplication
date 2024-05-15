@@ -2,8 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_us_article"
-        android:enabled="true"
-        android:icon="@drawable/baseline_broadcast_on_personal_24"
+        android:icon="@drawable/icon_us"
         android:title="@string/us_article"
         />
 <!--    <item-->
