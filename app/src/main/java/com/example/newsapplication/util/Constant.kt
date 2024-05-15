@@ -6,6 +6,6 @@ object Constant {
     const val ARTICLE_KEY = "ARTICLE_KEY"
     const val NEWS_ENDPOINT_US = "v2/everything?q=usa&apiKey=e860240294174d8286e778649e9d3f46&page=1"
     const val NEWS_ENDPOINT_UK = "v2/everything?q=uk&apiKey=e860240294174d8286e778649e9d3f46&page=1"
-    const val NEWS_ENDPOINT_CANADA = "v2/everything?q=uk&apiKey=e860240294174d8286e778649e9d3f46&page=1"
+    const val NEWS_ENDPOINT_CANADA = "v2/everything?q=canada&apiKey=e860240294174d8286e778649e9d3f46&page=1"
 
 }

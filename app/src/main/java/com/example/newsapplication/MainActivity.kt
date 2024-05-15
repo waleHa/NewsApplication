@@ -39,6 +39,12 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.nav_Canada_article-> {
+                    Log.i("TAG: MainActivity", "setFragment: Article")
+                    navController.navigate(R.id.nav_Canada_article)
+                    true
+                }
+
                 else -> {
 //                    Log.i(TAG, "setFragment: Else")
                     false

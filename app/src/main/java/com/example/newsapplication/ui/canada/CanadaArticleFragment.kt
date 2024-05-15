@@ -1,32 +1,34 @@
-package com.example.newsapplication.ui.uk
+package com.example.newsapplication.ui.canada
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapplication.R
+import com.example.newsapplication.databinding.FragmentCanadaArticleBinding
 import com.example.newsapplication.databinding.FragmentUkArticleBinding
 import com.example.newsapplication.domain.model.Article
 import com.example.newsapplication.ui.ArticleAdapter
+import com.example.newsapplication.ui.uk.UkArticleViewModel
 import com.example.newsapplication.util.Constant
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class UkArticleFragment : Fragment() {
-    lateinit var binding: FragmentUkArticleBinding
+class CanadaArticleFragment : Fragment() {
+    lateinit var binding: FragmentCanadaArticleBinding
 
-    val viewModel: UkArticleViewModel by viewModels()
+    val viewModel: CanadaArticleViewModel by viewModels()
     private lateinit var adapter: ArticleAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentUkArticleBinding.inflate(inflater, container, false)
+        binding = FragmentCanadaArticleBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
