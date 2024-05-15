@@ -61,6 +61,6 @@ class CanadaArticleFragment : Fragment() {
         val bundle = Bundle().apply {
             putParcelable(Constant.ARTICLE_KEY, article)
         }
-        findNavController().navigate(R.id.action_nav_uk_article_to_detailsFragment, bundle)
+        findNavController().navigate(R.id.action_canadaArticleFragment_to_detailsFragment, bundle)
     }
 }
