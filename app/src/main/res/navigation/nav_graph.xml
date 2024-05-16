@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_us_article"
-        android:name="com.example.newsapplication.ui.us.UsArticleFragment"
+        android:name="com.example.newsapplication.ui.article.usarticle.UsArticleFragment"
         android:label="fragment_article"
         tools:layout="@layout/fragment_us_article">
         <action
@@ -17,13 +17,13 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.newsapplication.ui.us.UsDetailsFragment"
+        android:name="com.example.newsapplication.ui.article.usarticle.UsDetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
 
     <fragment
         android:id="@+id/nav_uk_article"
-        android:name="com.example.newsapplication.ui.uk.UkArticleFragment"
+        android:name="com.example.newsapplication.ui.article.ukarticle.UkArticleFragment"
         android:label="fragment_uk_article"
         tools:layout="@layout/fragment_uk_article" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_Canada_article"
-        android:name="com.example.newsapplication.ui.canada.CanadaArticleFragment"
+        android:name="com.example.newsapplication.ui.article.canadaarticle.CanadaArticleFragment"
         android:label="fragment_canada_article"
         tools:layout="@layout/fragment_canada_article" >
         <action

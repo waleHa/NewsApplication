@@ -1,34 +1,32 @@
-package com.example.newsapplication.ui.canada
+package com.example.newsapplication.ui.article.ukarticle
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapplication.R
-import com.example.newsapplication.databinding.FragmentCanadaArticleBinding
 import com.example.newsapplication.databinding.FragmentUkArticleBinding
 import com.example.newsapplication.domain.model.Article
-import com.example.newsapplication.ui.ArticleAdapter
-import com.example.newsapplication.ui.uk.UkArticleViewModel
+import com.example.newsapplication.ui.article.ArticleAdapter
 import com.example.newsapplication.util.Constant
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class CanadaArticleFragment : Fragment() {
-    lateinit var binding: FragmentCanadaArticleBinding
+class UkArticleFragment : Fragment() {
+    lateinit var binding: FragmentUkArticleBinding
 
-    val viewModel: CanadaArticleViewModel by viewModels()
+    val viewModel: UkArticleViewModel by viewModels()
     private lateinit var adapter: ArticleAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCanadaArticleBinding.inflate(inflater, container, false)
+        binding = FragmentUkArticleBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -61,6 +59,6 @@ class CanadaArticleFragment : Fragment() {
         val bundle = Bundle().apply {
             putParcelable(Constant.ARTICLE_KEY, article)
         }
-        findNavController().navigate(R.id.action_canadaArticleFragment_to_detailsFragment, bundle)
+        findNavController().navigate(R.id.action_nav_uk_article_to_detailsFragment, bundle)
     }
 }

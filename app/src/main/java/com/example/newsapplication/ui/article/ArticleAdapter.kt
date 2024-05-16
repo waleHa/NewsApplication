@@ -1,4 +1,4 @@
-package com.example.newsapplication.ui
+package com.example.newsapplication.ui.article
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ import com.example.newsapplication.R
 import com.example.newsapplication.databinding.ItemArticleBinding
 import com.example.newsapplication.domain.model.Article
 
-class ArticleAdapter(private val onItemClicked: (Article) -> Unit): ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(DiffCallBack) {
+class ArticleAdapter(private val onItemClicked: (Article) -> Unit): ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(
+    DiffCallBack
+) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val binding = ItemArticleBinding.inflate(LayoutInflater.from(parent.context), parent, false)

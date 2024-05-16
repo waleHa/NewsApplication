@@ -7,4 +7,10 @@
     <string name="canada_article">Canada Articles</string>
     <string name="news">news</string>
     <string name="avatar">avatar</string>
+    <string name="content_description_end_icon">content_description_end_icon</string>
+    <string name="text_view_user_name">Email:</string>
+    <string name="text_view_password">password</string>
+    <string name="button_text_sign_in">Sign In</string>
+    <string name="text_view_text_forgot_password">Forgot Password</string>
+    <string name="default_web_client_id">342295552027-p0m9ceu3gu2c1oi8c4kid1ma1p5von1b.apps.googleusercontent.com</string>
 </resources>
