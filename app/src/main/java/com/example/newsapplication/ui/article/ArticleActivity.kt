@@ -32,7 +32,7 @@ class ArticleActivity : AppCompatActivity() {
     private fun firebaseImpl() {
 
         recordImageView()
-        crashImpl()
+//        crashImpl()
     }
 
     private fun recordImageView() {
@@ -42,34 +42,30 @@ class ArticleActivity : AppCompatActivity() {
 //         [START image_view_event]
         Firebase.analytics.logEvent(
             FirebaseAnalytics.Event.SELECT_CONTENT,
-            bundleOf(FirebaseAnalytics.Param.ITEM_ID to id,
-            FirebaseAnalytics.Param.ITEM_NAME to name,
-            FirebaseAnalytics.Param.CONTENT_TYPE to "image"
+            bundleOf(
+                FirebaseAnalytics.Param.ITEM_ID to id,
+                FirebaseAnalytics.Param.ITEM_NAME to name,
+                FirebaseAnalytics.Param.CONTENT_TYPE to "image"
+            )
         )
-        )
-    //{
-//            param(FirebaseAnalytics.Param.ITEM_ID, id);
-//            param(FirebaseAnalytics.Param.ITEM_NAME, name);
-//            param(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
-//        }
 //         [END image_view_event]
     }
 
-    private fun crashImpl() {
-        // Creates a button that mimics a crash when pressed
-        val crashButton = Button(this)
-        crashButton.text = "Test Crash"
-        crashButton.setOnClickListener {
-            throw RuntimeException("Test Crash") // Force a crash
-        }
-
-        addContentView(
-            crashButton, ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-        )
-    }
+//    private fun crashImpl() {
+//        // Creates a button that mimics a crash when pressed
+//        val crashButton = Button(this)
+//        crashButton.text = "Test Crash"
+//        crashButton.setOnClickListener {
+//            throw RuntimeException("Test Crash") // Force a crash
+//        }
+//
+//        addContentView(
+//            crashButton, ViewGroup.LayoutParams(
+//                ViewGroup.LayoutParams.MATCH_PARENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT
+//            )
+//        )
+//    }
 
     private fun navigationHandle() {
         val navHostFragment = supportFragmentManager

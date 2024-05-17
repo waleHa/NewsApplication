@@ -1,6 +1,5 @@
 package com.example.newsapplication.ui.signin
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,17 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.IntentSenderRequest
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.commit
 import com.example.newsapplication.R
 import com.example.newsapplication.ui.article.ArticleActivity
 import com.example.newsapplication.databinding.FragmentSignInBinding
-import com.example.newsapplication.ui.MainActivity
-import com.google.android.gms.auth.api.identity.BeginSignInRequest
-import com.google.android.gms.auth.api.identity.Identity
-import com.google.android.gms.auth.api.identity.SignInClient
-import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,7 +42,13 @@ class SignInFragment : Fragment() {
                 isVerifiedUser()
         }
 
-//        googleSignIn()
+
+        binding.buttonTopSignUp.setOnClickListener {
+            requireActivity().supportFragmentManager.commit {
+                replace(R.id.fragment_container, SignInGoogleFragment())
+                addToBackStack(null)
+            }
+        }
     }
 
     override fun onStart() {
@@ -68,19 +66,7 @@ class SignInFragment : Fragment() {
 
 
 
-//    private fun googleSignIn() {
-//        oneTapClient = Identity.getSignInClient(requireActivity())
-//        signInRequest = BeginSignInRequest.builder()
-//            .setGoogleIdTokenRequestOptions(
-//                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
-//                    .setSupported(true)
-//                    // Your server's client ID, not your Android client ID.
-//                    .setServerClientId(getString(R.string.default_web_client_id))
-//                    // Only show accounts previously used to sign in.
-//                    .setFilterByAuthorizedAccounts(false)
-//                    .build())
-//            .build()
-//    }
+
 
     private fun isVerifiedUser() {
         auth.signInWithEmailAndPassword(
@@ -111,12 +97,6 @@ class SignInFragment : Fragment() {
 
 
 
-//        binding.buttonTopSignUp.setOnClickListener {
-//            requireActivity().supportFragmentManager.commit {
-//                replace(R.id.fragment_container, SignUpFragment())
-//                addToBackStack(null)
-//            }
-//        }
 
 
     private fun validateEntries(): Boolean {

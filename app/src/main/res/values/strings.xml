@@ -13,4 +13,11 @@
     <string name="button_text_sign_in">Sign In</string>
     <string name="text_view_text_forgot_password">Forgot Password</string>
     <string name="default_web_client_id">342295552027-p0m9ceu3gu2c1oi8c4kid1ma1p5von1b.apps.googleusercontent.com</string>
+
+    //Facebook Setting
+    <string name="facebook_application_id">1003236634571622</string>
+    <string name="facebook_login_protocol_scheme">fb1003236634571622</string>
+    <string name="facebook_client_token">13326508d0f9b21485810f8557ca3a68</string>
+
+
 </resources>
